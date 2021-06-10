@@ -1,2 +1,2 @@
 # manifest-merger
-A way to merge manifest files into one.
+A way to merge Salesforce manifest files into one.
