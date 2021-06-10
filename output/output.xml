@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://soap.sforce.com/2006/04/metadata"><types><name>FlexiPage</name><members>Record_Page_For_Object2</members><members>Record_Page_For_Object</members></types><types><name>LightningComponentBundle</name><members>lwcComponent2</members><members>lwcComponent</members></types><types><name>CustomLabels</name><members>*</members></types><types><name>ApexClass</name><members>ApexClass_Test2</members><members>ApexClass2</members><members>ApexClass</members><members>ApexClass_Test</members></types></package>
