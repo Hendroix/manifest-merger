@@ -10,18 +10,15 @@ def getManifests():
     for filename in os.listdir(directory):
         if filename != 'package.xml' and filename.endswith('.xml'):
             print(filename)
+            buildConsolitdatedManifest(directory + '/' + filename)
 
-def buildConsolidateManifest():
-    tree = ET.parse('./manifests/package.xml')
+def buildConsolitdatedManifest(filePath):
+    tree = ET.parse(filePath)
     root = tree.getroot()
     for child in root.findall('types'):
-        typeName = child.find('name')
-        typeMembers = []
+        typeName = child.find('name').text
         for member in child.iterfind('members'):
-            typeMembers.append(str(member.text))
-
-        typesMap[typeName] = typeMembers
-
-    print(typesMap)
+            typesMap[typeName][member.text]
 
 getManifests()
+print(typesMap)

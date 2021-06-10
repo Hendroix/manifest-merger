@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package>
     <types>
-        <members>ApexClass</members>
-        <members>ApexClass_Test</members>
+        <members>ApexClass2</members>
+        <members>ApexClass_Test2</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>lwcComponent</members>
+        <members>lwcComponent2</members>
         <name>LightningComponentBundle</name>
     </types>
     <types>
@@ -14,7 +14,7 @@
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>Record_Page_For_Object</members>
+        <members>Record_Page_For_Object2</members>
         <name>FlexiPage</name>
     </types>
     <version>51.0</version>
