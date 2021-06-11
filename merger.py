@@ -26,21 +26,24 @@ def buildConsolitdatedManifest(filePath):
 def generateOutput(map):
     package = ET.Element('package')
     package.set('xmlns', 'http://soap.sforce.com/2006/04/metadata')
+    
     for key in map:
         types = ET.SubElement(package, 'types')
-        name = ET.SubElement(types, 'name')
-        ET.indent(types, space='    ', level=1)
-        name.text = key
+        map[key] = sorted(map[key])
+        
         for item in map[key]:
             members = ET.SubElement(types, 'members')
             members.text = item
+            
+        name = ET.SubElement(types, 'name')
+        name.text = key
 
     tree = ElementTree(package)
+    ET.indent(tree, space='    ', level=0)
     tree.write('./output/output.xml', encoding='utf-8', xml_declaration=True)
         
 def main():
     getManifests()
-    #print(typesMap)
     generateOutput(typesMap)
     
 if __name__ == "__main__":
