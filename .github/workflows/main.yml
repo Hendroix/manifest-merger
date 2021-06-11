@@ -26,6 +26,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: MERGE
         run: |
+          echo ${GITHUB_REF#refs/heads/},
+          echo ${{ steps.vars.outputs.short_ref }},
           echo starting merging.,
           python3 merger.py ./output/${GITHUB_HEAD_REF}.xml,
           echo merging done.
