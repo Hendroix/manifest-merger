@@ -27,12 +27,12 @@ jobs:
       - name: MERGE
         run: |
           echo starting merging.,
-          python3 merger.py ./output/${GITHUB_BASE_REF#HEAD}.xml,
+          python3 merger.py ./output/${GITHUB_HEAD_REF}.xml,
           echo merging done.
           
       # Runs a set of commands using the runners shell
       - name: GIT COMMIT PUSH
         run: |
-          git add ./output/${GITHUB_BASE_REF#HEAD}.xml,
+          git add ./output/${GITHUB_HEAD_REF}.xml,
           git commit -m "Adding merged manifest",
           git push
