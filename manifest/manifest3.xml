@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package>
+    <types>
+        <members>ApexClass3</members>
+        <members>ApexClass_Test3</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>lwcComponent3</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>Record_Page_For_Object3</members>
+        <name>FlexiPage</name>
+    </types>
+    <version>51.0</version>
+</Package>
