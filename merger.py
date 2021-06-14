@@ -55,7 +55,7 @@ def getManifests():
             buildConsolitdatedManifest(directory + '/' + filename)
 
 def generateOutput(map):
-    package = ET.Element('package')
+    package = ET.Element('Package')
     package.set('xmlns', 'http://soap.sforce.com/2006/04/metadata')
     
     for key in map:
